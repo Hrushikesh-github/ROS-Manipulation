@@ -1,0 +1,22 @@
+# yaml file for package simple_grasping with rosnode "basic_grasping_perception"
+############################################################################
+gripper:
+  tool_to_planning_frame: 0.180    # should be 0.165 after fix the simple_grasping
+  # finger tips are 195mm from wrist_roll_link, fingers are 60mm deep
+  finger_depth: 0.020
+  gripper_tolerance: 0.05
+  approach:
+    min: 0.145
+    desired: 0.15
+  retreat:
+    min: 0.145
+    desired: 0.15
+
+use_debug: True
+########################################
+#tool_to_planning_frame: The distance from the tool (gripper) to the planning frame of the arm. Usually it is the last link of the arm, in this case, wrist_roll_link.
+#finger_depth: The depth distance of the fingers of the gripper.
+#gripper_tolerance: The allowed error for the grasping process.
+#approach: The distance to move the gripper when approaching the object to grasp.
+#retreat: The distance to move the gripper back once it has grasped the object.
+#use_debug: This parameter will trigger the debug mode, which will allow us to visualize the perception process through RViz.
